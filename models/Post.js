@@ -16,7 +16,7 @@ const PostSchema = new mongoose.Schema({
         default:[],
     },
 },
-{ timestampls: true}
+{ timestamps: true}
 );
 
 module.exports = mongoose.model("Post", PostSchema);
