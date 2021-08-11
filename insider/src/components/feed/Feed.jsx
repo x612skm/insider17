@@ -11,12 +11,11 @@ export default function Feed() {
   const [posts,setPosts] = useState([])
   
   useEffect(() => {
-    const fetchPosts = async() => {
-      const res = await axios.get("posts/timeline/610d95a1c2f0ca583ebc95e9l");
+    
+      const res =  axios.get("posts/timeline/610d95a1c2f0ca583ebc95e9l");
       console.log(res);
-    };
-    fetchPosts();
-  },[]); 
+ 
+  },[]);
 
   return (
     <div className="feed">
