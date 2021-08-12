@@ -8,11 +8,11 @@ import axios from "axios";
 // {import { Posts } from "../../dummyData";}
 
 export default function Feed() {
-  const [posts,setPosts] = useState([])
+  const [posts,setPosts] = useState([]);
   
   useEffect(() => {
     
-      const res =  axios.get("posts/timeline/610d95a1c2f0ca583ebc95e9l");
+      const res =  axios.get("http://localhost:8801/api/posts/timeline/610d95a1c2f0c");
       console.log(res);
  
   },[]);
