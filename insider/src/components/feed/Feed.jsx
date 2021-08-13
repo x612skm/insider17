@@ -9,22 +9,24 @@ import axios from "axios";
 
 export default function Feed() {
   const [posts,setPosts] = useState([]);
+
   
   useEffect(() => {
-    
-      const res =  axios.get("http://localhost:8801/api/posts/timeline/610d95a1c2f0c");
-      console.log(res);
- 
-  },[]);
+      const fetchPosts = async() => {
+      const res =await axios.get("posts/timeline/6102f4693fdb30145fc86d3e")
+      setPosts(res.data)
+      };
+      fetchPosts();
+  },[])
 
   return (
     <div className="feed">
- 
+      {/* <input type="text" onChange={e=>setText(e.target.value)}/> */}
       <div className="feedWrapper">
         <Share />
-        {/* {Posts.map((p) => (
+        {posts.map((p) => (
           <Post key={p.id} post={p} />
-        ))} */}
+        ))}
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export default function Profile() {
               />
               <img
                 className="profileUserImg"
-                src={`${PF}post/7.jpeg`}
+                src={`${PF}person/7.jpeg`}
                 alt=""
               />
             </div>

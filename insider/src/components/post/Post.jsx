@@ -1,13 +1,23 @@
 import "./post.css";
 import { MoreVert } from "@material-ui/icons";
-import { Users, Posts } from "../../dummyData";
-import { useState } from "react";
+// import { Users, Posts } from "../../dummyData";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import {Link} from "react-router-dom"
 
 export default function Post({ post }) {
   const [like,setLike] = useState(post.like)
   const [isLiked,setIsLiked] = useState(false)
+  const [user,setUser] = useState({})
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
+  useEffect(() => {
+    const fetchUser = async() => {
+    const res =await axios.get(`users/${post.userId}`)
+    setUser(res.data)
+    };
+    fetchUser();
+},[])
 
   const likeHandler =()=>{
     setLike(isLiked ? like-1 : like+1)
