@@ -26,9 +26,9 @@ app.use(morgan("common"));
 // app.get("/users", (req,res) =>{
 //     res.send("welcome to t he user oae")
 // })
-
-app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
+
 app.use("/api/posts", postRoute);
 
 app.listen(8801, () =>{
