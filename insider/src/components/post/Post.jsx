@@ -3,7 +3,7 @@ import { MoreVert } from "@material-ui/icons";
 // import { Users, Posts } from "../../dummyData";
 import { useEffect, useState } from "react";
 import axios from "axios";
-//import {Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 import {format} from "timeago.js";
 
 export default function Post({ post }) {
@@ -29,11 +29,13 @@ export default function Post({ post }) {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
+            <Link to={`profile/${user.username}`}>
             <img
               className="postProfileImg"
               src={user.profilePicture || PF+"person/noavatar.jpeg"}
               alt=""
             />
+            </Link>
             <span className="postUsername">
               {user.username}
             </span>
