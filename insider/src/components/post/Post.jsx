@@ -6,6 +6,7 @@ import axios from "axios";
 import {Link} from "react-router-dom"
 import {format} from "timeago.js";
 
+
 export default function Post({ post }) {
   const [like,setLike] = useState(post.likes.length)
   const [isLiked,setIsLiked] = useState(false)
