@@ -3,8 +3,8 @@ import { MoreVert } from "@material-ui/icons";
 // import { Users, Posts } from "../../dummyData";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import {Link} from "react-router-dom"
 import {format} from "timeago.js";
+import {Link} from "react-router-dom"
 
 
 export default function Post({ post }) {
