@@ -6,7 +6,7 @@ import axios from "axios";
 import {format} from "timeago.js";
 import {Link} from "react-router-dom"
 
-
+/* making the bucket list here for the initials*/
 export default function Post({ post }) {
   const [like,setLike] = useState(post.likes.length)
   const [isLiked,setIsLiked] = useState(false)
